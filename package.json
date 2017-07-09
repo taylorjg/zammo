@@ -1,7 +1,7 @@
 {
   "name": "zammo",
   "version": "0.0.0",
-  "description": "Port of QuickCheck to JavaScript",
+  "description": "(yet another) Port of QuickCheck to JavaScript",
   "main": "dist/index.js",
   "directories": {
     "test": "test"
