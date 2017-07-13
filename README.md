@@ -22,7 +22,16 @@ console.log(`result: ${JSON.stringify(result)}`);
 * implement arbitraries
 * implement integration with [Mocha](https://mochajs.org/)
 * implement integration with [Jasmine](https://jasmine.github.io/)
+* QCGen, random, replaying random, etc.
+* TypeScript typings for users of zammo
+* ES2015 & Flow ? Possible use re picking an Arbitrary for a type ?
 * (and more...)
+
+### Current progress against the list all things to implement
+
+* *Gen combinators*: ~~(constant)~~, ~~choose~~, ~~elements~~, ~~frequency~~, ~~oneof~~, ~~vectorOf~~, suchThat, suchThatMaybe, etc.
+* *Propery? combinators*: ~~forAll~~, etc.
+* etc.
 
 ## Other JavaScript property testing libraries
 
