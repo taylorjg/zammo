@@ -38,7 +38,7 @@ growingElements, ~~sized~~, ~~getSize~~, ~~resize~~, scale, suchThat, suchThatMa
 * __Property combinators__: ~~forAll~~, forAllShrink, shrinking, ==>, ===, total, ~~verbose~~,
 ~~once~~, ~~again~~, ~~withMaxSuccess~~, within, noShrinking, .&., .&&., conjoin, .||., disjoin, counterexample,
 printTestCase, whenFail, whenFail', ~~expectFailure~~,
-label, collect, classify, cover, discard, mapSize
+~~label~~, ~~collect~~, ~~classify~~, ~~cover~~, discard, mapSize
 
 ## Other JavaScript property testing libraries
 
