@@ -1,3 +1,5 @@
+[![CircleCI](https://circleci.com/gh/taylorjg/zammo.svg?style=svg)](https://circleci.com/gh/taylorjg/zammo)
+
 ## Description
 
 I have only just started this project so it doesn't do much yet.
