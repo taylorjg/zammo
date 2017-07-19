@@ -35,7 +35,7 @@ console.log(`result: ${JSON.stringify(result)}`);
 ~~quickCheck~~, ~~quickCheckWith~~, ~~quickCheckWithResult~~, ~~quickCheckResult~~,
 ~~verboseCheck~~, ~~verboseCheckWith~~, ~~verboseCheckWithResult~~, ~~verboseCheckResult~~
 * __Gen combinators__: ~~(constant)~~, ~~choose~~, ~~oneof~~, ~~frequency~~, ~~elements~~,
-growingElements, ~~sized~~, ~~getSize~~, ~~resize~~, scale, suchThat, suchThatMap, suchThatMaybe,
+growingElements, ~~sized~~, ~~getSize~~, ~~resize~~, scale, ~~suchThat~~, ~~suchThatMap~~, ~~suchThatMaybe~~,
 ~~listOf~~, ~~listOf1~~, ~~vectorOf~~, infiniteListOf, shuffle, sublistOf, ~~generate~~
 * __Property combinators__: ~~forAll~~, forAllShrink, shrinking, ==>, ===, total, ~~verbose~~,
 ~~once~~, ~~again~~, ~~withMaxSuccess~~, within, noShrinking, .&., .&&., conjoin, .||., disjoin, counterexample,
