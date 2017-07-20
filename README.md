@@ -7,9 +7,21 @@ The idea is to port QuickCheck to JavaScript.
 I want the port to be as faithful to the original as possible.
 
 ```js
-const result = quickCheckResult(forAll(genInt, n => n + n === 2 * n));
-console.log(`result: ${JSON.stringify(result)}`);
-```
+quickCheck(forAll(genInt, n =>
+    classify(n % 2 === 0, 'even', 'odd',
+        classify(n < 0, 'neg', 'pos',
+            classify(Math.abs(n) > 50, 'large',
+                n + n === 2 * n)))));
+// +++ OK, passed 100 tests:
+// 26% neg, even
+// 19% pos, even
+// 19% pos, odd
+// 17% neg, odd
+//  6% large, neg, odd
+//  6% large, pos, odd
+//  4% large, neg, even
+//  3% large, pos, even
+ ```
 
 ## TODO
 
@@ -24,12 +36,13 @@ console.log(`result: ${JSON.stringify(result)}`);
 * implement arbitraries
 * implement integration with [Mocha](https://mochajs.org/)
 * implement integration with [Jasmine](https://jasmine.github.io/)
+* implement integration with [Karma](https://karma-runner.github.io/)
 * QCGen, random, replaying random, etc.
 * TypeScript typings for users of zammo
 * ES2015 & Flow ? Possible use re picking an Arbitrary for a type ?
 * (and more...)
 
-### Current progress against the list all things to implement
+### Current progress against the list of things to implement
 
 * __Running tests__: ~~stdArgs~~,
 ~~quickCheck~~, ~~quickCheckWith~~, ~~quickCheckWithResult~~, ~~quickCheckResult~~,
@@ -37,9 +50,7 @@ console.log(`result: ${JSON.stringify(result)}`);
 * __Gen combinators__: ~~(constant)~~, ~~choose~~, ~~oneof~~, ~~frequency~~, ~~elements~~,
 growingElements, ~~sized~~, ~~getSize~~, ~~resize~~, scale, ~~suchThat~~, ~~suchThatMap~~, ~~suchThatMaybe~~,
 ~~listOf~~, ~~listOf1~~, ~~vectorOf~~, infiniteListOf, shuffle, sublistOf, ~~generate~~
-* __Property combinators__: ~~forAll~~, forAllShrink, shrinking, ==>, ===, total, ~~verbose~~,
-~~once~~, ~~again~~, ~~withMaxSuccess~~, within, noShrinking, .&., .&&., conjoin, .||., disjoin, counterexample,
-printTestCase, whenFail, whenFail', ~~expectFailure~~,
+* __Property combinators__: ~~forAll~~, forAllShrink, shrinking, ~~noShrinking~~, ==>, ===, total, ~~verbose~~, ~~once~~, ~~again~~, ~~withMaxSuccess~~, within, .&., .&&., conjoin, .||., disjoin, counterexample, whenFail, whenFail', ~~expectFailure~~,
 ~~label~~, ~~collect~~, ~~classify~~, ~~cover~~, discard, mapSize
 
 ## Other JavaScript property testing libraries
