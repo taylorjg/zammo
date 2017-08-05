@@ -50,7 +50,7 @@ quickCheck(forAll(genInt, n =>
 * __Gen combinators__: ~~(constant)~~, ~~choose~~, ~~oneof~~, ~~frequency~~, ~~elements~~,
 growingElements, ~~sized~~, ~~getSize~~, ~~resize~~, scale, ~~suchThat~~, ~~suchThatMap~~, ~~suchThatMaybe~~,
 ~~listOf~~, ~~listOf1~~, ~~vectorOf~~, infiniteListOf, shuffle, sublistOf, ~~generate~~
-* __Property combinators__: ~~forAll~~, forAllShrink, shrinking, ~~noShrinking~~, ==>, ===, total, ~~verbose~~, ~~once~~, ~~again~~, ~~withMaxSuccess~~, within, .&., .&&., conjoin, .||., disjoin, counterexample, whenFail, whenFail', ~~expectFailure~~,
+* __Property combinators__: ~~forAll~~, forAllShrink, shrinking, ~~noShrinking~~, ==>, ===, total, ~~verbose~~, ~~once~~, ~~again~~, ~~withMaxSuccess~~, within, .&., .&&., conjoin, .||., disjoin, counterexample, ~~whenFail~~, ~~whenFail'~~, ~~expectFailure~~,
 ~~label~~, ~~collect~~, ~~classify~~, ~~cover~~, discard, mapSize
 
 ## Other JavaScript property testing libraries
