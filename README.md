@@ -47,11 +47,14 @@ quickCheck(forAll(genInt, n =>
 * __Running tests__: ~~stdArgs~~,
 ~~quickCheck~~, ~~quickCheckWith~~, ~~quickCheckWithResult~~, ~~quickCheckResult~~,
 ~~verboseCheck~~, ~~verboseCheckWith~~, ~~verboseCheckWithResult~~, ~~verboseCheckResult~~
-* __Gen combinators__: ~~(constant)~~, ~~choose~~, ~~oneof~~, ~~frequency~~, ~~elements~~,
+* __Gen combinators__: ~~constant~~<sup>1</sup>, ~~choose~~, ~~oneof~~, ~~frequency~~, ~~elements~~,
 growingElements, ~~sized~~, ~~getSize~~, ~~resize~~, scale, ~~suchThat~~, ~~suchThatMap~~, ~~suchThatMaybe~~,
 ~~listOf~~, ~~listOf1~~, ~~vectorOf~~, infiniteListOf, shuffle, sublistOf, ~~generate~~
-* __Property combinators__: ~~forAll~~, forAllShrink, shrinking, ~~noShrinking~~, ==>, ===, total, ~~verbose~~, ~~once~~, ~~again~~, ~~withMaxSuccess~~, within, .&., .&&., conjoin, .||., disjoin, counterexample, ~~whenFail~~, ~~whenFail'~~, ~~expectFailure~~,
+* __Property combinators__: ~~forAll~~, ~~forAllShrink~~, shrinking, ~~noShrinking~~, ==>, ===, total, ~~verbose~~, ~~once~~, ~~again~~, ~~withMaxSuccess~~, within, .&., .&&., conjoin, .||., disjoin, ~~counterexample~~, ~~whenFail~~, ~~whenFail'~~, ~~expectFailure~~,
 ~~label~~, ~~collect~~, ~~classify~~, ~~cover~~, discard, mapSize
+
+<sup>1</sup> although `constant` is not part of QuickCheck, it is included here as a counterpart to
+[const](https://www.scalacheck.org/files/scalacheck_2.11-1.13.4-api/index.html#org.scalacheck.Gen$@const[T](x:T):org.scalacheck.Gen[T]) in ScalaCheck.
 
 ## Other JavaScript property testing libraries
 
