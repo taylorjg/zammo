@@ -28,7 +28,7 @@ quickCheck(forAll(genInt, n =>
 * ~~implement a generator for a primitive type~~
 * ~~implement `sample` to sample the generator~~
 * ~~implement a very basic version of `quickCheckResult` (no shrinking)~~
-* output messages (e.g. `+++ OK, passed 100 tests.`)
+* ~~output messages (e.g. `+++ OK, passed 100 tests.`)~~
 * implement more generators
 * implement generator combinators (e.g. `elements`, `oneof`, etc.)
 * implement property combinators (e.g. `withMaxSuccess`, `classify`, `collect`, etc.)
@@ -50,8 +50,8 @@ quickCheck(forAll(genInt, n =>
 * __Gen combinators__: ~~constant~~<sup>1</sup>, ~~choose~~, ~~oneof~~, ~~frequency~~, ~~elements~~,
 growingElements, ~~sized~~, ~~getSize~~, ~~resize~~, scale, ~~suchThat~~, ~~suchThatMap~~, ~~suchThatMaybe~~,
 ~~listOf~~, ~~listOf1~~, ~~vectorOf~~, infiniteListOf, shuffle, sublistOf, ~~generate~~
-* __Property combinators__: ~~forAll~~, ~~forAllShrink~~, shrinking, ~~noShrinking~~, ==>, ===, total, ~~verbose~~, ~~once~~, ~~again~~, ~~withMaxSuccess~~, within, .&., .&&., conjoin, .||., disjoin, ~~counterexample~~, ~~whenFail~~, ~~whenFail'~~, ~~expectFailure~~,
-~~label~~, ~~collect~~, ~~classify~~, ~~cover~~, discard, mapSize
+* __Property combinators__: ~~forAll~~, ~~forAllShrink~~, shrinking, ~~noShrinking~~, ~~==>~~, ===, total, ~~verbose~~, ~~once~~, ~~again~~, ~~withMaxSuccess~~, within, .&., .&&., conjoin, .||., disjoin, ~~counterexample~~, ~~whenFail~~, ~~whenFail'~~, ~~expectFailure~~,
+~~label~~, ~~collect~~, ~~classify~~, ~~cover~~, mapSize
 
 <sup>1</sup> although `constant` is not part of QuickCheck, it is included here as a counterpart to
 [const](https://www.scalacheck.org/files/scalacheck_2.11-1.13.4-api/index.html#org.scalacheck.Gen$@const[T](x:T):org.scalacheck.Gen[T]) in ScalaCheck.
