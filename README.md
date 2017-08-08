@@ -28,19 +28,22 @@ quickCheck(forAll(genInt, n =>
 * ~~implement a generator for a primitive type~~
 * ~~implement `sample` to sample the generator~~
 * ~~implement a very basic version of `quickCheckResult` (no shrinking)~~
-* ~~output messages (e.g. `+++ OK, passed 100 tests.`)~~
+* ~~implement messages (e.g. `+++ OK, passed 100 tests.`)~~
+* IN PROGRESS: implement generator combinators (e.g. `elements`, `oneof`, etc.)
+* IN PROGRESS: implement property combinators (e.g. `withMaxSuccess`, `classify`, `collect`, etc.)
+* IN PROGRESS: implement shrinking
+* IN PROGRESS: implenent unit tests
+* IN PROGRESS: implement usage examples
 * implement more generators
-* implement generator combinators (e.g. `elements`, `oneof`, etc.)
-* implement property combinators (e.g. `withMaxSuccess`, `classify`, `collect`, etc.)
-* implement shrinking
 * implement arbitraries
 * implement integration with [Mocha](https://mochajs.org/)
 * implement integration with [Jasmine](https://jasmine.github.io/)
 * implement integration with [Karma](https://karma-runner.github.io/)
 * QCGen, random, replaying random, etc.
 * TypeScript typings for users of zammo
-* ES2015 & Flow ? Possible use re picking an Arbitrary for a type ?
-* (and more...)
+* ES2015 & [Flow](https://flow.org/) ? Possible use re picking arbitraries ?
+* create gh-pages branch
+* create wiki documentation
 
 ### Current progress against the list of things to implement
 
