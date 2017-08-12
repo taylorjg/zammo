@@ -3,14 +3,6 @@ import { lines } from '../lib';
 
 describe('text', () => {
 
-    // lines "" == []
-    // lines "\n" == [""]
-    // lines "one" == ["one"]
-    // lines "one\n" == ["one"]
-    // lines "one\n\n" == ["one",""]
-    // lines "one\ntwo" == ["one","two"]
-    // lines "one\ntwo\n" == ["one","two"]
-
     it('lines ""', () => {
         const result = lines('');
         expect(result).to.deep.equal([]);
