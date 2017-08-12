@@ -8,7 +8,7 @@
   },
   "scripts": {
     "build": "babel -d dist lib",
-    "test": "mocha --compilers js:babel-register './test/**/*.js'"
+    "test": "mocha --compilers js:babel-register './test/**/*.js' -s 500"
   },
   "keywords": [],
   "author": "Jonathan Taylor",

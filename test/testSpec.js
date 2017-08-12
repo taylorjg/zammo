@@ -1,23 +1,51 @@
 import { expect } from 'chai';
-import { quickCheckResult, forAll, genInt } from '../lib';
+import {
+    quickCheckResult,
+    quickCheckWithResult,
+    verboseCheckResult,
+    verboseCheckWithResult,
+    stdArgs,
+    forAll,
+    genInt,
+    lines
+} from '../lib';
 
 describe('test', () => {
 
-    // quickCheck
-    // quickCheckWith
-    // quickCheckResult
-    // quickCheckWithResult
-    // verboseCheck
-    // verboseCheckWith
-    // verboseCheckResult
-    // verboseCheckWithResult
-    // stdArgs
-    
+    const prop = forAll(genInt, n => n * 2 === n + n);
+
     it('quickCheckResult', () => {
-        const prop = n => n * 2 === n + n;
-        const result = quickCheckResult(forAll(genInt, prop));
+        const result = quickCheckResult(prop);
         expect(result.numTests).to.equal(100);
         expect(result.labels).to.be.empty;
         expect(result.output).to.equal("+++ OK, passed 100 tests.\n");
     });
+
+    it('quickCheckWithResult', () => {
+        const result = quickCheckWithResult(stdArgs.withMaxSuccess(20), prop);
+        expect(result.numTests).to.equal(20);
+        expect(result.labels).to.be.empty;
+        expect(result.output).to.equal("+++ OK, passed 20 tests.\n");
+    });
+
+    it('verboseCheckResult', () => {
+        const result = verboseCheckResult(prop);
+        expect(result.numTests).to.equal(100);
+        expect(result.labels).to.be.empty;
+        expect(lines(result.output)).to.have.length(201);
+    });
+
+    it('verboseCheckWithResult', () => {
+        const result = verboseCheckWithResult(stdArgs.withMaxSuccess(20), prop);
+        expect(result.numTests).to.equal(20);
+        expect(result.labels).to.be.empty;
+        expect(lines(result.output)).to.have.length(41);
+    });
+
+    // TODO:
+    // quickCheck
+    // quickCheckWith
+    // verboseCheck
+    // verboseCheckWith
+    // stdArgs
 });

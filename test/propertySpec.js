@@ -1,15 +1,27 @@
 import { expect } from 'chai';
-import { quickCheckResult, forAll, verbose, genInt, lines } from '../lib';
+import {
+    quickCheckResult,
+    forAll,
+    verbose,
+    genInt,
+    lines
+} from '../lib';
 
 describe('property combinators', () => {
 
+    it('verbose', () => {
+        const prop = n => n * 2 === n + n;
+        const result = quickCheckResult(verbose(forAll(genInt, prop)));
+        expect(lines(result.output)).to.have.length(201);
+    });
+
+    // TODO:
     // mapSize
     // shrinking
     // noShrinking
     // counterexample
     // whenFail
     // whenFail2
-    // verbose
     // expectFailure
     // once
     // again
@@ -22,10 +34,4 @@ describe('property combinators', () => {
     // implication / Boolean.prototype['==>']
     // forAll
     // forAllShrink
-
-    it('verbose', () => {
-        const prop = n => n * 2 === n + n;
-        const result = quickCheckResult(verbose(forAll(genInt, prop)));
-        expect(lines(result.output)).to.have.length(201);
-    });
 });
