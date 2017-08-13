@@ -36,9 +36,11 @@ quickCheck(forAll(genInt, n =>
 * IN PROGRESS: implement usage examples
 * implement more generators
 * implement arbitraries
+* implement modifiers (e.g. NonEmptyList, Positive, NonZero, etc.)
 * implement integration with [Mocha](https://mochajs.org/)
 * implement integration with [Jasmine](https://jasmine.github.io/)
 * implement integration with [Karma](https://karma-runner.github.io/)
+* exception handling
 * QCGen, random, replaying random, etc.
 * TypeScript typings for users of zammo
 * ES2015 & [Flow](https://flow.org/) ? Possible use re picking arbitraries ?
@@ -67,6 +69,7 @@ growingElements, ~~sized~~, ~~getSize~~, ~~resize~~, scale, ~~suchThat~~, ~~such
 
 ## Links
 
+* [QuickCheck](https://hackage.haskell.org/package/QuickCheck)
 * [QuickCheck git repo](https://github.com/nick8325/quickcheck)
-* [QuickCheck documentation](https://hackage.haskell.org/package/QuickCheck-2.10.0.1/docs/Test-QuickCheck.html)
-* [QuickCheck manual](http://www.cse.chalmers.se/~rjmh/QuickCheck/manual.html)
+* [QuickCheck: An Automatic Testing Tool for Haskell](http://www.cse.chalmers.se/~rjmh/QuickCheck/manual.html)
+* [The Design and Use of QuickCheck](https://begriffs.com/posts/2017-01-14-design-use-quickcheck.html)
